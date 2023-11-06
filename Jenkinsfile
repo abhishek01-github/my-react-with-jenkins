@@ -9,28 +9,24 @@ pipeline {
             steps {
                 // Checkout your code from the GitHub repository
                 checkout scm
-                sh 'sleep 10'
             }
         }
 
         stage('Install Dependencies') {
             steps {
                 sh 'npm install' // Install project dependencies
-                sh 'sleep 10'
             }
         }
 
         stage('Run Unit Tests') {
             steps {
                 sh 'npm test' // Run unit tests
-                sh 'sleep 10'
             }
         }
 
         stage('Build') {
             steps {
                 sh 'npm run build' // Build the React app
-                sh 'sleep 10'
             }
         }
 
