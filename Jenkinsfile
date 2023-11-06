@@ -14,19 +14,19 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm install' // Install project dependencies
+                bat 'npm install' // Install project dependencies
             }
         }
 
         stage('Run Unit Tests') {
             steps {
-                sh 'npm test' // Run unit tests
+                bat 'npm test' // Run unit tests
             }
         }
 
         stage('Build') {
             steps {
-                sh 'npm run build' // Build the React app
+                bat 'npm run build' // Build the React app
             }
         }
 
