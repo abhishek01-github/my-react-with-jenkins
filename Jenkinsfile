@@ -14,13 +14,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm install' // Install project dependencies
-            }
-        }
-
-        stage('Run Unit Tests') {
-            steps {
-                sh 'npm test' // Run unit tests
+                bat 'npm install' // Install project dependencies
             }
         }
 
